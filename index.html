@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css" type="text/css">
+    <!-- Incluye el CSS de Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Surmodel</title>
 </head>
+
 <body>
-    <section class="vistaUno">
+    <section class="first-view">
+        <h3>Nueva App</h3>
+        <h1>Surmodel</h1>
+    </section>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>Ofertas de trabajo</h2>
+                    <p>En Surmodel te ofrecemos ofertas de empleo que se ajustan a tu medida, brindándote un servicio de
+                        calidad</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>Solicitudes sencillas</h2>
+                    <p>De fácil uso, tenemos a tu disposición una interfaz la cual te brinda completa comodidad al
+                        momento de solicitar empleos</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>Perfil personalizado</h2>
+                    <p>Tus datos siempre estarán seguros con nosotros, ya que entendemos la confidencialidad de tu
+                        privacidad</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>Comunicación</h2>
+                    <p>Dentro de la aplicación de Surmodel encontrarás una sección que aclare tus dudas y adicionalmente
+                        encontarás una sección para presentarnos tus comentarios</p>
+                </div>
+            </div>
+            <!-- Repite lo mismo para las otras imágenes -->
+        </div>
+        <!-- Si deseas agregar botones de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <section class="vistaUno box">
         <div class="left-view">
-            <h3>Nueva App</h3>
-            <h1>Surmodel</h1>
-            <p>- Ofertas de trabajo que se ajustan a tu medida</p>
-            <p>- Solicitudes sencillas con ofertas reales</p>
-            <p>- Perfil personalizado totalmente confidencial</p>
-            <p>- Resolvemos tus dudas dentro de la App</p>
+            <h3>¡ Te invitamos a ser parte de Surmodel instalando nuestra App y comentandonos tu experiencia !</h3>
             <div class="botones">
                 <a href="#"><img src="/assets/google.webp" alt=""></a>
                 <a href="#"><img src="/assets/play.jpg" alt="" class="app"></a>
@@ -24,5 +63,20 @@
             <img src="/assets/65713.png" alt="">
         </div>
     </section>
+    <script src="/styles/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Inicializa Swiper
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
+
 </html>
